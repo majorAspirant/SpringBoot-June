@@ -1,0 +1,55 @@
+1. AutoConfiguration
+	- Container can load all the beans based on the pom.xml entries...through jars
+	- but based on the condition we can restrict unnecessary beans
+	- @Conditional
+		- based on @beans,@property,@class,@WebApplication
+		- custom conditions
+		- ie.@ConditionaOnClass, @ConditionOnBean,@ConditionOnProperty,@ConditionOnWebApplication
+ex:
+	@ComponentScan("base package")
+	@Configuration
+	@EnableAutoConfiguration(excludes="..ClassName") --
+
+
+	@ConditionalOnClass(ClassName.class)	
+	pubilc methodName(){
+	//create this method only when the conditional class is available.
+	}
+
+	@ConditinalonMissingClass()
+	pubilc methodName(){
+	//create this method only when the conditional class is available.
+	}
+
+
+
+WebInitializer = equalent of web.xml (To intialize and load the spring container)
+==========================
+
+public class MyWebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		return new Class[] { SpringRootConfig.class };
+	}
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		return new Class[] { SpringWebConfig.class };
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		return new String[] { "/" };
+	}
+
+	@Override
+	@ConditionalOnWebApplication("ServletClass") //incase we have two servlets 
+						//select one among them
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		super.onStartup(servletContext);
+		//servletContext.setInitParameter("spring.profiles.active", "hsql");
+		servletContext.setInitParameter("spring.profiles.active", "h2");
+	}
+
+}

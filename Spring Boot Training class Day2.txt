@@ -1,0 +1,37 @@
+Day2:
+
+1. Adv Spring Boot
+	- too much of configurations -> AutoConfig
+	- dependency mgmt -> SpringStarters 
+		- ex. SpringBootStarter-MVC - brings all the jars required for MVC
+	- explicit Server -> Embedded Tomcat Server
+		- other server can also be configured using Application.properties
+	- support for monitoring -> Actuators
+	- no CLI(command Line I/F) -> Boot provides CLI
+	- Cloud support
+	- Security enhancements
+	- Microservices 
+
+
+2. SpringBoot	- CLI
+		- IO(Starters)
+		- Actuators
+		- AutoConfig
+3. CLI
+4. IO Starter
+
+5. YAML - yet another markup language
+	- for readablitiy across diff tech developers
+	- hierarchy model
+	- starts with 3 dashes(---)
+	- # comment
+	- [] array
+	- 
+
+6. yaml vs propertyfile
+
+	- key/value (map, lists, scalar types) 	x	key/value pair
+	- hierarchy based			x 	non-hierarchical
+	- mulitiple spring profiles in default 	x	one spring profile per config
+
+	- not works with @PropertySource	x	Works with @PropertySource

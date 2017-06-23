@@ -1,0 +1,10 @@
+1. Actuators
+	- to know the health stats of the application
+	- along with security component to restrict access to the details of the application
+	- like heapsize, beans etc
+	- in json format
+	- 
+2. Customizing actuators
+	- every endpoint is linked with either an Abstract class/ Interface
+	- by extending this we can customize the actuators
+	- 

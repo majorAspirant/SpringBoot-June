@@ -1,0 +1,53 @@
+1. Spring 3.x
+2. Features ->  
+3. drawbacks of autowiring
+	- byType issues - ambiguity
+	- delay in identifiying the bean
+	- 
+4. architecture
+i. Testing
+ii. Core 
+	- core
+	- context  - 
+	- beans
+	- expression lang -> ${}
+iii.
+iv.
+v.
+vi.
+vii.
+viii.
+ix.
+
+5. configuring 2 diff Dispatcher Servlet - 1 for Admin mondule and another like angular
+6. XMlViewResolver = when to use it? - when we expect response of different type like jsp,doc,xml,json etc.
+7. 
+
+8. https://github.com/Training2017/SpringBoot-June.git
+
+9. SpringMVC project - 	
+	- using jstl tab lib - 
+	- commandName (in the form:form action="" commandName="employee"
+	- @ModelAttribute to get the commandName passed to the controller
+
+
+
+10. Spring Validation
+	i. 
+	ii.
+	iii. Spring Container based	
+		- using hibernate annotations/ JSR303 Validations
+		- enable MVC annotation driven in cofiguration
+		- In Controller method - use @Valid, BindingResult 
+		- Validation starts with @Valid mentioned in the controller method. ex. 
+
+pubilc ModelAndView save(@Valid @ModelAttribute, BindingResult result){
+
+}
+
+
+
+11. 
+	
+
+	

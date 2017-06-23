@@ -1,0 +1,15 @@
+1. com.cg.mvc.SpringBootApplication class - 
+2. com.cg.config.XXXXXAdapter class for configuration
+	- @enableWebMVC => to enable spring mvc  - class level annotation-- corresponding 
+	getDefaultServlet(DefaultServletHandlerConfigurer configurer) {
+		configurer.enable(); 
+	}  - - to enable dispatcher servlet
+	- ViewResolver - method to create InternalViewResolver
+	- 
+
+Advantages of java Configurations vs XML config:
+=====================================
+Java is type safe. Compiler will report issues if you are configuring right bean class qualifiers.
+XML based on configuration can quickly grow big. [Yes we can split and import but still]
+Search is much simpler, refactoring will be bliss. Finding a bean definition will be far easier.
+There are still people who like XML configuration and continue to do it.

@@ -1,0 +1,19 @@
+The Spring Boot CLI :
+
+The Spring Boot CLI is a command line tool that can be used if you want to quickly prototype with Spring. It allows you to run Groovy scripts, which means that you have a familiar Java-like syntax, without so much boilerplate code.
+
+pre-requisite:
+
+-Maven
+-
+
+
+- set path to env variable ( D:\Users\lnc\Downloads\spring-boot-cli-1.5.4.RELEASE-bin\spring-1.5.4.RELEASE\bin)
+
+- create a HelloWorld in java -> save it as HelloWorld.groovy
+
+> spring run HelloWorld.groovy
+
+
+#to change the port on the run 
+> spring run HelloWorld.groovy -- --server.port=8085
